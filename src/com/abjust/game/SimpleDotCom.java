@@ -1,33 +1,33 @@
 package src.com.abjust.game;
+
+import java.util.ArrayList;
+
 public class SimpleDotCom
 {
-    static int[] locationCells = new int[3];
+    private ArrayList<String> locationCells;
     static int numOfHits = 0;
 
-    public void setLocationCells(int[] locations)
+    public void setLocationCells(ArrayList<String> locations)
     {
         locationCells=locations;
     }
 
     public String checkYourself(String aUserInput)
     {
-        int guessValue = Integer.parseInt(aUserInput);
         String result="Miss";
-        for(int locationValue:locationCells)
+        int index = locationCells.indexOf(aUserInput);
+        if(index>=0)
         {
-            if(locationValue==guessValue)
+            locationCells.remove(index);
+            if(locationCells.isEmpty())
+            {
+                result="Kill";
+            }else
             {
                 result="Hit";
-                numOfHits++;
-                break;
             }
         }
-                if(numOfHits==locationCells.length)
-                {
-                    result= "Kill";
-                }
-
-                System.out.println(result);
-                return result;
-            }
+        System.out.println(result);
+        return result;
+    }
 }

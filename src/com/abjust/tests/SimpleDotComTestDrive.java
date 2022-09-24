@@ -1,11 +1,16 @@
 package src.com.abjust.tests;
+import java.util.ArrayList;
+
 import src.com.abjust.game.SimpleDotCom;
 
 public class SimpleDotComTestDrive {
     public static void main(String[] args)
     {
         String testResult = "failed";
-        int[] locations = {2,3,4};
+        ArrayList<String> locations = new ArrayList<>();
+        locations.add("2");
+        locations.add("3");
+        locations.add("4");
         String userGuess = "2";
         SimpleDotCom dot = new SimpleDotCom();
 

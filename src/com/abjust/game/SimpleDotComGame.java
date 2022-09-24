@@ -1,4 +1,5 @@
 package src.com.abjust.game;
+import java.util.ArrayList;
 import java.util.Random;
 
 import src.com.abjust.game.helper.GameHelper;
@@ -22,13 +23,13 @@ class SimpleDotComGame {
         System.out.println("You managed to win with "+guesses+" guesses");
     }
 
-private static int[] generateLocationData()
+private static ArrayList<String> generateLocationData()
 {
-    int[] locations = new int[3];
+    ArrayList<String> locations = new ArrayList<String>();
     int random = new Random().nextInt(4);
     for (int i=0;i<3;i++)
     {
-        locations[0+i]=random+i;
+        locations.add(String.valueOf(random+i));
     }
 return locations;
 }
