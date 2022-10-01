@@ -21,7 +21,7 @@ public class GameHelper {
             if(inputLine.length()==0) return null;
         }catch(IOException e)
         {
-            System.out.println("Exceptiion: "+e);
+            System.out.println("Exception: "+e);
         }
         return inputLine.toLowerCase();
     }

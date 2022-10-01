@@ -69,7 +69,7 @@ public class DotComBust {
             }else
             {
                 System.out.println("Your total number of guesses is "+numberOfGuesses);
-                System.out.println("Unfortunalty, this is a sad result!");
+                System.out.println("Unfortunate, this is a sad result!");
                 System.out.println("if I were you, I would try again!");
             }
         }
